@@ -1,12 +1,12 @@
 import React from 'react';
 
-const Drawer = () => {
+const Drawer = (props) => {
   return (
-    <div  style={{display: "none"}} className="overlay">
+    <div className="overlay">
       <div className="drawer d-flex flex-column">
-        <h2 className="mb-30 d-flex justify-between">Карзина <img className="cu-p" src="/img/btn-remove.svg"
-                                                                  alt="Remove"/></h2>
-
+        <h2 className="mb-30 d-flex justify-between">Карзина
+          <img className="cu-p" src="/img/btn-remove.svg" alt="Remove" onClick={props.onClickCart}/>
+        </h2>
         <div className="items">
           <div className="cartItem d-flex align-center mb-20">
             <div style={{backgroundImage: 'url(/img/sneakers/2.jpg)'}}
